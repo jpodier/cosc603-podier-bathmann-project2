@@ -43,8 +43,11 @@ public abstract class Cell implements IOwnable {
 
 	/**
 	 * Play action.
+	 * 
+	 * @param msg the action message
+	 * @return true if the play was allowed, otherwise false
 	 */
-	public abstract void playAction();
+	public abstract boolean playAction(String msg);
 
 	/**
 	 * Sets the name.
