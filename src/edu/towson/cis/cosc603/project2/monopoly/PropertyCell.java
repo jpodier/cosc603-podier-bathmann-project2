@@ -70,8 +70,8 @@ public class PropertyCell extends Cell {
 	}
 
 	/**
-	 * Calculates the rent
-	 * 
+	 * Calculates the rent.
+	 *
 	 * @param originalRent the ordinary amount of rent for this property
 	 * @return the amount of rent to charge adjusted for any monopolies
 	 */
