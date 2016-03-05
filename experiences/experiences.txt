@@ -1,3 +1,7 @@
 Task 6
 No, renaming the parameter is not an omission on the part of Eclipse. The name of the parameter for the setter method is not related whatsoever to the field variable, except in similarity in name.
 The rename command is much different than a find and replace. Eclipse finds all usages of the identifier (field, parameter, method, etc.) and updates each usage with the new name. A find and replace would have also renamed other identifiers that may also have been called owner.
+
+Task 7
+Eclipse was able to successfully push down and pull up the available field and its getter and setter. Previewing the change helped identify if the correct actions were being taken.
+This type of refactoring is effective at remediating the code duplication, large class, and downcasting design smells. Pulling up the repeated available field and methods was able to reduce duplicated code, which is troublesome for software maintainence because a change made to one code section may not be made in the duplicates. Pushing down may reduce the size of a super class, but should only be performed when at least one subclass does not require the member that is being pushed down. Finally, we saw that pushing up a member can solve the need to downcast when all subclasses can share the same member. This is what caused the compliation errors after pushing down the available field.
