@@ -8,3 +8,6 @@ This type of refactoring is effective at remediating the code duplication, large
 
 Task 8
 The getTheOwner and setTheOwner methods were extracted to the IOwnable interface (IOwnable.java). Extracting an interface can solve the downcasting code smell since ownable items no longer need to inherent from the Cell class. This could make the code more maintainable since new ownable items can be more easily added to the game. A new item class would simply need to implement the IOwnable interface. However, the classes that used the owner setter and getter were updated to use the IOwnable interface instead of Cell where possible. This assumes no future use of Cell's other methods or fields will be used in those areas of the code.
+
+Task 9
+I chose to include the String array declaration as part of method to extract. Since the owner is a field, the new method would have access to the owner and be able to get an array of the monopolies itself. The calling method no longer needs to care about this detail. The paramter name rentToCharge was a bit misleading since that is what we are attempting to calcuate. Therefore, we changed the name to originalRent and adjusted the new method accordingly.
