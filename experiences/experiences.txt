@@ -11,3 +11,7 @@ The getTheOwner and setTheOwner methods were extracted to the IOwnable interface
 
 Task 9
 I chose to include the String array declaration as part of method to extract. Since the owner is a field, the new method would have access to the owner and be able to get an array of the monopolies itself. The calling method no longer needs to care about this detail. The paramter name rentToCharge was a bit misleading since that is what we are attempting to calcuate. Therefore, we changed the name to originalRent and adjusted the new method accordingly.
+
+Task 10
+Extracting a local variable can make the code more maintainable by reducing the amount of duplicate code. While this refactoring only eliminated one call to a getter, extracting a local variable is often more useful if the value is unnecessarily calculated multiple times which can increase the chance of errors in the code.
+This refactoring is not always a good idea and may impact the correctness of a program, especially for reference types. Consider if between usages of the new local variable, the setter for colorGroup in the cell class was invoked, thereby changing the color group. The local variable would still reference the old value of the color group and may lead to an error.
