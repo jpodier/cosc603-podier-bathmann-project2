@@ -1,0 +1,3 @@
+Task 6
+No, renaming the parameter is not an omission on the part of Eclipse. The name of the parameter for the setter method is not related whatsoever to the field variable, except in similarity in name.
+The rename command is much different than a find and replace. Eclipse finds all usages of the identifier (field, parameter, method, etc.) and updates each usage with the new name. A find and replace would have also renamed other identifiers that may also have been called owner.
