@@ -19,3 +19,6 @@ This refactoring is not always a good idea and may impact the correctness of a p
 Task 11
 Changing a method signature could eliminate feature envy if the method makes too many inapproprate calls into other classes that would better be handled as paramters. It could also reduce the number of parameters if not all are deemed necessary. Addionally, it could eliminte the need to downcast if the return type is changed to a subclass of the previous return type.
 Other are changed due to this refactoring. All the subclasses of Cell were modified to change the signature and add a return statement. Also, any class that invoked the playAction method had to change since a String parameter is now a required argument. Eclipse modified those classes to supply null as the argument. Since the playAction method doesn't do anything with the parameter this is acceptable. But if the string was to be used, all usages of playAction would need to be updated with a meaningful string argument.
+
+Task 13 
+Added a new class PropertyCellProduct after conducting the JDeodorant Bad Smell refactoring in which we used the God Class and extracted the getters and setters for the rent and the calculation for rent monopolies

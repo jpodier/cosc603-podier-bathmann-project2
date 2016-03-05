@@ -18,7 +18,7 @@ public class CardsTest extends TestCase {
      * @see junit.framework.TestCase#setUp()
      */
     protected void setUp() {
-        gameMaster = GameMaster.instance();
+    	gameMaster = GameMaster.instance();
         gameMaster.setGameBoard(new GameBoardCCGainMoney());
         gameMaster.setNumberOfPlayers(1);
         gameMaster.reset();
